@@ -18,7 +18,7 @@ ___
 Add the latest version of the app skeleton running this command.
 
 ```
-composer require tobento/app-skeleton
+composer create-project tobento/app-skeleton [my-app-name]
 ```
 
 ## Requirements
