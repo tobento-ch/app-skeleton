@@ -8,6 +8,10 @@ Use this app skeleton to quickly setup and start working on a new [**App**](http
 	- [Requirements](#requirements)
 - [Documentation](#documentation)
     - [App](#app)
+        - [Directory Structure](#directory-structure)
+        - [Config](#config)
+        - [Src](#src)
+        - [Register Boots](#register-boots)
     - [App Bundles](#app-bundles)
         - [Coming Soon](#coming-soon)
 - [Credits](#credits)
@@ -31,8 +35,81 @@ composer create-project tobento/app-skeleton [my-app-name]
 
 Check out the [**App**](https://github.com/tobento-ch/app) to learn more about the app in general.
 
-## App Bundles
+### Directory Structure
 
+The directories are set on the app.php file. You can freely change them as you prefer.
+
+```
+app/app.php
+```
+
+Check out the [**App Directories**](https://github.com/tobento-ch/app#app-directories) to learn more about directories in general.
+
+### Config
+
+Some [App Bundles](#app-bundles) have config file, which will be located as default at:
+
+```
+app/config/
+```
+
+### Src
+
+Some [App Bundles](#app-bundles) have will install php files for customization at:
+
+```
+app/src/
+```
+
+Or you might put your own files there.
+
+### Register Boots
+
+You may register boots on two places.
+
+**On the app.php config file**
+
+```
+app/config/app.php
+```
+
+```php
+return [
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Application Boots
+    |--------------------------------------------------------------------------
+    |
+    | The application boots.
+    |
+    */
+        
+    'boots' => [
+        \Tobento\App\Boot\ErrorHandling::class,
+        
+        // add more boots.
+        AnyBoot::class,
+    ],
+    
+];
+```
+
+**On the app.php file**
+
+```
+app/app.php
+```
+
+```php
+// Boot the app -----------------------------------------------------------
+$app->boot(\Tobento\App\Boot\App::class);
+
+// Add more boots here
+$app->boot(AnyBoot::class);
+```
+
+## App Bundles
 
 ### Coming soon
 
