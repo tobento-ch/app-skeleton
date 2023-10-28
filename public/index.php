@@ -9,7 +9,5 @@
  * @link        https://www.tobento.ch
  */
 
-declare(strict_types=1);
-
 // Get and run the application.
 (require __DIR__.'/../app/app.php')->run();
