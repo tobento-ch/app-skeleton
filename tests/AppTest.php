@@ -22,7 +22,7 @@ use Tobento\App\AppInterface;
  */
 class AppTest extends TestCase
 {
-    public function testDirs()
+    public function testCreateApp()
     {
         $app = (new AppFactory())->createApp();
         
