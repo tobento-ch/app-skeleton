@@ -13,6 +13,9 @@ declare(strict_types=1);
 
 use Tobento\App\AppFactory;
 
+// Register the autoloader ------------------------------------------------
+require __DIR__ . '/../vendor/autoload.php';
+
 // Create the application -------------------------------------------------
 $app = (new AppFactory())->createApp();
 //-------------------------------------------------------------------------
