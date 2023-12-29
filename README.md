@@ -12,8 +12,8 @@ Use this app skeleton to quickly setup and start working on a new [**App**](http
         - [Config](#config)
         - [Src](#src)
         - [Register Boots](#register-boots)
+    - [App Testing](#app-testing)
     - [App Bundles](#app-bundles)
-        - [Coming Soon](#coming-soon)
 - [Credits](#credits)
 ___
 
@@ -47,7 +47,7 @@ Check out the [**App Directories**](https://github.com/tobento-ch/app#app-direct
 
 ### Config
 
-Some [App Bundles](#app-bundles) have config file, which will be located as default at:
+Some [App Bundles](#app-bundles) have config files, which will be located as default at:
 
 ```
 app/config/
@@ -55,13 +55,7 @@ app/config/
 
 ### Src
 
-Some [App Bundles](#app-bundles) have will install php files for customization at:
-
-```
-app/src/
-```
-
-Or you might put your own files there.
+The ```app/src/``` directory is the place to put your classes which is namespaced under ```App```.
 
 ### Register Boots
 
@@ -109,19 +103,25 @@ $app->boot(\Tobento\App\Boot\App::class);
 $app->boot(AnyBoot::class);
 ```
 
+## App Testing
+
+**Unit Tests**
+
+Unit tests are designed to test small, isolated portions of code, often focusing on a single method.
+
+See demo test file: ```tests/Unit/DemoTest.php```
+
+**Feature Tests**
+
+Feature tests test the behavior of a complete application. They may make HTTP requests and test that the response is as expected.
+
+See demo test file: ```tests/Feature/DemoTest.php```
+
+Furthermore, check out the [App Testing](https://github.com/tobento-ch/app-testing) bundle for more information.
+
 ## App Bundles
 
-### Coming soon
-
-* [Database](#app-database) - Database support.
-* [Debugbar](#app-debugbar) - Debug routes, middlewares and much more.
-* [Http](#app-http) - Http, routing, middleware and session support.
-* [Migration](#app-migration) - Migration support.
-* [Localization](#app-localization) - Languages and translation support.
-* [Resource](#app-resource) - Resources support.
-* [Shop](#app-shop) - An online e-commerce store.
-* [Storage](#app-storage) - Storages support.
-* [View](#app-view) - Views rendering support.
+[List Of Available App Bundles](https://github.com/tobento-ch?tab=repositories&q=app)
 
 # Credits
 
