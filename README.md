@@ -27,7 +27,7 @@ composer create-project tobento/app-skeleton [my-app-name]
 
 ## Requirements
 
-- PHP 8.0 or greater
+- PHP 8.4 or greater
 
 # Documentation
 
